@@ -3,6 +3,7 @@ from selenium import webdriver
 import time
 
 driver = webdriver.Chrome()
+driver.maximize_window()
 #等待10s
 driver.implicitly_wait(10)
 driver.get("http://www.baidu.com")
