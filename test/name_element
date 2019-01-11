@@ -6,7 +6,7 @@ driver = webdriver.Chrome()
 #等待10s
 driver.implicitly_wait(10)
 driver.get("http://www.baidu.com")
-#定义百度输入框并输入文本“书语湘镡”
+#定位百度输入框并输入文本“书语湘镡”
 driver.find_element_by_name("wd").send_keys("书语湘镡")
 time.sleep(2)
 #退出浏览器

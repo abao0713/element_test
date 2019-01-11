@@ -6,8 +6,9 @@ driver = webdriver.Chrome()
 #等待10s
 driver.implicitly_wait(10)
 driver.get("http://www.baidu.com")
-#定义百度输入框并输入文本“书语湘镡”
-driver.find_element_by_class_name("s_ipt").send_keys("书语湘镡")
+#定位百度首页的学术字段并点击
 time.sleep(2)
+driver.find_element_by_link_text("学术").click()
+#driver.find_element_by_link_text(str(u"学术".encode('utf-8')))
 #退出浏览器
 driver.quit()
