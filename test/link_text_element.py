@@ -7,7 +7,7 @@ driver.maximize_window()
 #等待10s
 driver.implicitly_wait(10)
 driver.get("http://www.baidu.com")
-#定位百度首页的学术字段并点击
+# 定位百度首页的学术字段并点击
 time.sleep(2)
 try:
     driver.find_element_by_link_text("学术").click()
