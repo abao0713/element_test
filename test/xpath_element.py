@@ -39,11 +39,18 @@ driver.find_element_by_xpath("//span[@id='s_kw_wrap']/input")
 driver.find_element_by_xpath("//form[@id='form']/span/input")
 #通过索引进行定位"北极"，注意索引从1开始
 driver.find_element_by_xpath("//*[@id='sur']/option[1]")
-driver.find_element_by_xpath("input")
-driver.find_element_by_xpath("input")
-
-
-
-
+#通过xpath的逻辑运算来定位
+driver.find_element_by_xpath("//*[@id='su' and @type='submit']")
+#xpath模糊匹配多个元素
+#模糊匹配正则表达式
+driver.find_element_by_xpath("//*[matchs(text(), '百度一下')]")
+#通过文本查找
+driver.find_element_by_xpath("//*[contains(text(), '百度一下')]")
+#通过id属性匹配
+driver.find_element_by_xpath("//*[contains(@id, 'su')]")
+#通过开头字符匹配
+driver.find_element_by_xpath("//*[starts-with(@id, 's_kw')]")
+#通过结尾字符匹配
+driver.find_element_by_xpath("//*[ends-with(@id, 'kw_wrap')]")
 time.sleep(2)
 driver.quit()
